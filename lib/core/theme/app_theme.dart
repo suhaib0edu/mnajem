@@ -2,7 +2,8 @@ import '../g_index.dart';
 
 class AppTheme {
   getTheme() {
-    return ThemeData().copyWith(
+    return ThemeData(fontFamily: 'Cairo').copyWith(
+      primaryColor: baseColor,
       scaffoldBackgroundColor: backgroundColor,
     );
   }

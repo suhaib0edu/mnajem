@@ -19,3 +19,17 @@ dev_dependencies:
 flutter: 
   uses-material-design: true
 
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: fonts/Cairo-Medium.ttf
+    - family: Almarai
+      fonts:
+        - asset: fonts/Almarai-Light.ttf
+          weight: 700
+    - family: Tajawal
+      fonts:
+        - asset: fonts/Tajawal-Medium.ttf
+          weight: 700
+    
