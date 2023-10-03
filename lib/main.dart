@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'core/g_index.dart';
 import 'app/routes/app_pages.dart';
+import 'core/theme/app_theme.dart';
 
 void main() {
   runApp(
@@ -10,7 +10,8 @@ void main() {
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       locale: const Locale('ar', 'SA'),
-      
+      defaultTransition: Transition.fade,
+      theme: AppTheme().getTheme(),
     ),
   );
 }
