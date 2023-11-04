@@ -7,7 +7,7 @@ class SuhScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundScaffold,
+      backgroundColor: backgroundC,
       body: SafeArea(
         child: body,
       ),
