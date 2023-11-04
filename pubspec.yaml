@@ -10,6 +10,7 @@ dependencies:
   get: 4.6.6
   flutter: 
     sdk: flutter
+  flutter_svg: ^2.0.9
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
@@ -18,4 +19,10 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
-
+  assets:
+    - assets/fonts/
+    - assets/svg/
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Medium.ttf
