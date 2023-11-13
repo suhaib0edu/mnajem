@@ -44,7 +44,7 @@ class SuhTWIButton extends StatelessWidget {
             if (assetName != null)
               SvgPicture.asset(
                 assetName ?? '',
-                width: iconSize ?? 15,
+                width: iconSize ?? 16,
                 color: iconColor,
               ),
             if (text != null && assetName != null)
