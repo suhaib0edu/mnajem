@@ -7,9 +7,11 @@ import 'app/routes/app_pages.dart';
 void main() {
   runApp(
     GetMaterialApp(
-      title: "Application",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
+      locale: const Locale('ar', 'SA'),
+      defaultTransition: Transition.leftToRight,
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
