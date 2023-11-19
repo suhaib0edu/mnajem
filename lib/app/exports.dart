@@ -1,6 +1,8 @@
+export 'package:mnajem/app/routes/app_pages.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';
 export 'package:flutter_svg/svg.dart';
+
 
 
 //theme
@@ -14,6 +16,7 @@ export 'utils/widgets/suh_container.dart';
 export 'utils/widgets/suh_button.dart';
 export 'utils/widgets/suh_text.dart';
 export 'utils/widgets/suh_t_w_i_boutton.dart';
+export 'utils/widgets/suh_text_field.dart';
 
 //components
 export 'utils/components/buttons/login_button.dart';

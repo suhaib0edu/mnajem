@@ -8,24 +8,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SuhScaffold(
       body: ListView(
-        children: [
-          LoginButton(),
-          Center(child: RegisterButton()),
-          Center(
-              child: FilterButton(
-            assetName: forYouSVG,
-            text: 'من اجلك',
-          )),
-          PostForms(
-            likeCount: '5',
-          ),
-          PostForms(
-            likeCount: '32',
-          ),
-          PostForms(
-            likeCount: '49',
-          ),
-        ],
+        children: [],
       ),
     );
   }

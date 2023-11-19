@@ -10,6 +10,9 @@ void main() {
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       locale: const Locale('ar', 'SA'),
+      theme: ThemeData(
+        fontFamily: 'Cairo'
+      ),
       defaultTransition: Transition.leftToRight,
       debugShowCheckedModeBanner: false,
     ),
