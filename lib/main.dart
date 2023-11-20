@@ -12,6 +12,7 @@ void main() {
       locale: const Locale('ar', 'SA'),
       theme: ThemeData(
         fontFamily: 'Cairo'
+        
       ),
       defaultTransition: Transition.leftToRight,
       debugShowCheckedModeBanner: false,

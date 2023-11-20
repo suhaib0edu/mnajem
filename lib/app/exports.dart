@@ -22,5 +22,6 @@ export 'utils/widgets/suh_text_field.dart';
 export 'utils/components/buttons/login_button.dart';
 export 'utils/components/buttons/register_button.dart';
 export 'utils/components/buttons/follow_button.dart';
+export 'utils/components/buttons/select_button.dart';
 export 'utils/components/avatar/avatar.dart';
 export 'utils/components/post/post_forms/post_forms.dart';
