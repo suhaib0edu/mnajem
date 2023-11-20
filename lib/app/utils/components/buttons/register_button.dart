@@ -1,8 +1,9 @@
 import 'package:mnajem/app/exports.dart';
 
 class RegisterButton extends StatelessWidget {
+  final String? text;
   final void Function()? onPressed;
-  const RegisterButton({super.key, this.onPressed});
+  const RegisterButton({super.key, this.onPressed, this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -10,8 +11,8 @@ class RegisterButton extends StatelessWidget {
       bkgColor: Colors.transparent,
       borderSideColor: baseColor.withOpacity(0.5),
       onPressed: onPressed,
-      child: const SuhText(
-        text: 'إنشاء حساب جديد',
+      child: SuhText(
+        text: text ?? 'إنشاء حساب جديد',
         color: baseColor,
       ),
     );
