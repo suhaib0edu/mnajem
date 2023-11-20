@@ -10,7 +10,7 @@ class SuhTextField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 8),
       border: Border.all(color: baseColor),
       child: TextField(
-        style: TextStyle(color: textColor, fontSize: 12),
+        style: TextStyle(color: textColor2, fontSize: 12),
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: TextStyle(
