@@ -6,18 +6,18 @@ class StartView extends GetView<StartController> {
   const StartView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3), () => Get.toNamed(Routes.AUTH));
+    Future.delayed(const Duration(seconds: 3), () => Get.offAllNamed(Routes.AUTH));
     return SuhScaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(logoSVG),
-            // Padding(
-            //   padding:
-            //       const EdgeInsets.symmetric(vertical: 40, horizontal: 120),
-            //   child: LinearProgressIndicator(),
-            // ),
+            const Padding(
+              padding:
+                  EdgeInsets.symmetric(vertical: 40, horizontal: 120),
+              child: LinearProgressIndicator(),
+            ),
             
           ],
         ),
