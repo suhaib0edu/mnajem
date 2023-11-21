@@ -1,4 +1,5 @@
 import 'package:mnajem/app/exports.dart';
+import 'add_post/add_post.dart';
 import 'hashtag/hashtag_view.dart';
 
 import '../controllers/explore_controller.dart';
@@ -11,11 +12,15 @@ class ExploreView extends GetView<ExploreController> {
     return SuhScaffold(
       body: ListView(
         children: [
-          AppBarView(),
-          HashtagView(),
-          FrindesView(),
-          FilterView(),
-          PostView(),
+          AppBarView(
+            onTap: () {
+              Get.to(() => const AddPost());
+            },
+          ),
+          const HashtagView(),
+          const FrindesView(),
+          const FilterView(),
+          const PostView(),
         ],
       ),
     );
