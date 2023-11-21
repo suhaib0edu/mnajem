@@ -9,8 +9,8 @@ class AddJob extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundC,
       body: SafeArea(
-        child: Column(
-          children: [
+        child: ListView(
+          children: const [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Row(
@@ -38,7 +38,7 @@ class AddJob extends StatelessWidget {
             SuhTextField(
               hintText: 'راتب الوظيفة',
             ),
-            const WorkFilter(),
+            WorkFilter(),
           ],
         ),
       ),
