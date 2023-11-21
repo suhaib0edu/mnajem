@@ -15,22 +15,35 @@ class ProductItem extends StatelessWidget {
           width: 190,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Row(
+            child: Column(
               children: [
-                const SuhText(
-                  text: '120.000 ج',
-                  fontWeight: FontWeight.bold,
+                Row(
+                  children: [
+                    const SuhText(
+                      text: '120.000 ج',
+                      fontWeight: FontWeight.bold,
+                    ),
+                    const Spacer(),
+                    SuhText(
+                      text: '4.5',
+                      color: iconC0lor.withOpacity(0.7),
+                    ),
+                    Icon(
+                      Icons.star_rate_rounded,
+                      color: iconC0lor.withOpacity(0.6),
+                      size: 16,
+                    )
+                  ],
                 ),
-                const Spacer(),
-                SuhText(
-                  text: '4.5',
-                  color: iconC0lor.withOpacity(0.7),
+                const Row(
+                  children: [
+                    SuhText(
+                      text: 'اسم المنتج',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
+                  ],
                 ),
-                Icon(
-                  Icons.star_rate_rounded,
-                  color: iconC0lor.withOpacity(0.6),
-                  size: 16,
-                )
               ],
             ),
           ),

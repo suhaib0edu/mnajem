@@ -7,9 +7,10 @@ class SliderProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SuhListViewB(
-              isHorizontal: true,
-              height: 220,
-              itemCount: 10,
-              itemBuilder: (c, i) => ProductItem());
+      isHorizontal: true,
+      height: 240,
+      itemCount: 10,
+      itemBuilder: (c, i) => const ProductItem(),
+    );
   }
 }
