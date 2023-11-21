@@ -5,11 +5,13 @@ class LoginView extends GetView<AuthController> {
   const LoginView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        SuhTextField(),
-        SuhTextField(),
-        LoginButton(),
+        const SuhTextField(),
+        const SuhTextField(),
+        LoginButton(
+          onPressed :() => controller.goToControl(),
+        ),
       ],
     );
   }

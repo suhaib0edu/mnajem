@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:mnajem/app/exports.dart';
 import 'package:mnajem/app/modules/auth/controllers/auth_controller.dart';
 
-
 class RegisterView extends GetView<AuthController> {
   const RegisterView({Key? key}) : super(key: key);
   @override
@@ -15,7 +14,8 @@ class RegisterView extends GetView<AuthController> {
           const SizedBox(
             height: 40,
           ),
-          const RegisterButton(
+          RegisterButton(
+            onPressed: () => controller.goToControl(),
             text: 'أكمل التسجيل',
           ),
         ],

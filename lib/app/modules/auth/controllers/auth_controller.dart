@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:mnajem/app/exports.dart';
 
 class AuthController extends GetxController {
   //TODO: Implement AuthController
@@ -19,7 +20,7 @@ class AuthController extends GetxController {
     super.onClose();
   }
 
-    backToAuth() {
+  backToAuth() {
     screenView.value = 0;
     update();
   }
@@ -31,13 +32,12 @@ class AuthController extends GetxController {
   }
 
   goToRegisterView() {
-        screenView.value = 2;
+    screenView.value = 2;
     update();
     print(screenView.value);
   }
 
-  goToControl(){
-    
+  goToControl() {
+    Get.offAllNamed(Routes.CONTROL);
   }
-
 }
