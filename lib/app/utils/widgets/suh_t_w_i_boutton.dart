@@ -12,6 +12,7 @@ class SuhTWIButton extends StatelessWidget {
   final Color? txtColor;
   final Color? bkgColor;
   final EdgeInsetsGeometry? padding;
+  final Widget? child;
   const SuhTWIButton({
     super.key,
     this.onTap,
@@ -24,7 +25,7 @@ class SuhTWIButton extends StatelessWidget {
     this.iconColor,
     this.txtColor,
     this.bkgColor,
-    this.padding,
+    this.padding, this.child,
   });
 
   @override
@@ -37,7 +38,7 @@ class SuhTWIButton extends StatelessWidget {
         padding: padding ?? const EdgeInsets.all(0),
         radius: radius ?? 20,
         color: bkgColor ?? Colors.transparent,
-        child: Row(
+        child:child?? Row(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
