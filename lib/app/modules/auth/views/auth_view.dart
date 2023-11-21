@@ -38,21 +38,22 @@ class AuthView extends GetView<AuthController> {
               ),
               if (_csv.value == 1) const LoginView(),
               if (_csv.value == 2) const RegisterView(),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               if (_csv.value != 0)
-                Align(
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(8),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: SuhText(
-                        text: 'الصفحة الرئيسية',
+                Column(
+                  children: [
+                    SuhTWIButton(
+                      onTap: () => controller.backToAuth(),
+                      radius: 10,
+                      padding: const EdgeInsets.all(4),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new,
+                        color: iconC0lor,
                       ),
-                    ),
-                    onTap: () => controller.backToAuth(),
-                  ),
+                    )
+                  ],
                 ),
               const SizedBox(
                 height: 20,
