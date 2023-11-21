@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/auth/bindings/auth_binding.dart';
 import '../modules/auth/views/auth_view.dart';
+import '../modules/control/bindings/control_binding.dart';
+import '../modules/control/views/control_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/start/bindings/start_binding.dart';
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.AUTH,
       page: () => const AuthView(),
       binding: AuthBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTROL,
+      page: () => const ControlView(),
+      binding: ControlBinding(),
     ),
   ];
 }
