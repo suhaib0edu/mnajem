@@ -1,4 +1,5 @@
 import 'package:mnajem/app/exports.dart';
+import 'package:mnajem/app/modules/work/views/add_job/add_job.dart';
 import 'package:mnajem/app/modules/work/views/work_filter.dart';
 
 import '../controllers/work_controller.dart';
@@ -11,9 +12,11 @@ class WorkView extends GetView<WorkController> {
     return SuhScaffold(
       body: ListView(
         children: [
-          const AppBarView(),
-          WorkFilter(),
-          JobsPosts(),
+          AppBarView(
+            onTap: () => Get.to(() => const AddJob()),
+          ),
+          const WorkFilter(),
+          const JobsPosts(),
         ],
       ),
     );
