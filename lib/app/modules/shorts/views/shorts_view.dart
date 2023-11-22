@@ -1,4 +1,5 @@
 import 'package:mnajem/app/exports.dart';
+import 'package:mnajem/app/modules/shorts/views/add_video/add_video.dart';
 
 import '../controllers/shorts_controller.dart';
 
@@ -84,6 +85,7 @@ class ShortsView extends GetView<ShortsController> {
                 FilterButton(
                   assetName: addPostSVG,
                   bkgColor: container.withOpacity(0.4),
+                  onTap: () => Get.to(() => const AddVideo()),
                 ),
                 SizedBox(
                     height: 20,
