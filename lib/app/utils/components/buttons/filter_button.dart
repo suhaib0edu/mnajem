@@ -26,7 +26,7 @@ class FilterButton extends StatelessWidget {
       assetName: assetName,
       text: text,
       radius: radius ?? 8,
-      height: height ?? 30,
+      cHeight: height ?? 30,
       padding: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
       fontSize: fontSize ?? 11,
       iconSize: iconSize ?? 20,

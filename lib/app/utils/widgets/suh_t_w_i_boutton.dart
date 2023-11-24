@@ -5,7 +5,8 @@ class SuhTWIButton extends StatelessWidget {
   final String? assetName;
   final String? text;
   final double? radius;
-  final double? height;
+  final double? cHeight;
+  final double? cWidth;
   final double? fontSize;
   final double? iconSize;
   final Color? iconColor;
@@ -20,7 +21,8 @@ class SuhTWIButton extends StatelessWidget {
     this.assetName,
     this.text,
     this.radius,
-    this.height,
+    this.cHeight,
+    this.cWidth,
     this.fontSize,
     this.iconSize,
     this.iconColor,
@@ -37,6 +39,8 @@ class SuhTWIButton extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(radius ?? 20),
       child: SuhContainer(
+        height: cHeight,
+        width: cWidth,
         margin: const EdgeInsets.all(1),
         padding: padding ?? const EdgeInsets.all(0),
         radius: radius ?? 20,
