@@ -22,6 +22,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/svg/
+    - assets/svg/post/
   fonts:
     - family: Cairo
       fonts:
