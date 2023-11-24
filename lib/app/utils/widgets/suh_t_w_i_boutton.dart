@@ -12,6 +12,7 @@ class SuhTWIButton extends StatelessWidget {
   final Color? txtColor;
   final Color? bkgColor;
   final EdgeInsetsGeometry? padding;
+  final List<BoxShadow>? boxShadow;
   final Widget? child;
   const SuhTWIButton({
     super.key,
@@ -25,7 +26,9 @@ class SuhTWIButton extends StatelessWidget {
     this.iconColor,
     this.txtColor,
     this.bkgColor,
-    this.padding, this.child,
+    this.padding,
+    this.boxShadow,
+    this.child,
   });
 
   @override
@@ -38,28 +41,30 @@ class SuhTWIButton extends StatelessWidget {
         padding: padding ?? const EdgeInsets.all(0),
         radius: radius ?? 20,
         color: bkgColor ?? Colors.transparent,
-        child:child?? Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (assetName != null)
-              SvgPicture.asset(
-                assetName ?? '',
-                width: iconSize ?? 16,
-                color: iconColor,
-              ),
-            if (text != null && assetName != null)
-              const SizedBox(
-                width: 4,
-              ),
-            if (text != null)
-              SuhText(
-                text: text ?? '',
-                color: txtColor ?? textColor,
-                fontSize: fontSize ?? 9,
-              ),
-          ],
-        ),
+        boxShadow: boxShadow,
+        child: child ??
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (assetName != null)
+                  SvgPicture.asset(
+                    assetName ?? '',
+                    width: iconSize ?? 16,
+                    color: iconColor,
+                  ),
+                if (text != null && assetName != null)
+                  const SizedBox(
+                    width: 4,
+                  ),
+                if (text != null)
+                  SuhText(
+                    text: text ?? '',
+                    color: txtColor ?? textColor,
+                    fontSize: fontSize ?? 9,
+                  ),
+              ],
+            ),
       ),
     );
   }

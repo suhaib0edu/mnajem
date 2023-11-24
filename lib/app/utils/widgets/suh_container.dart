@@ -9,6 +9,7 @@ class SuhContainer extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double? radius;
   final BoxBorder? border;
+  final List<BoxShadow>? boxShadow;
   final Widget? child;
   const SuhContainer({
     super.key,
@@ -20,6 +21,7 @@ class SuhContainer extends StatelessWidget {
     this.borderRadius,
     this.radius,
     this.border,
+    this.boxShadow,
     this.child,
   });
 
@@ -34,6 +36,7 @@ class SuhContainer extends StatelessWidget {
         color: color ?? container,
         border: border,
         borderRadius: borderRadius ?? BorderRadius.circular(radius ?? 10),
+        boxShadow: boxShadow,
       ),
       child: child,
     );
