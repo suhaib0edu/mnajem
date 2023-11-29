@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class ControlController extends GetxController {
-  //TODO: Implement ControlController
+class WorkController extends GetxController {
+  //TODO: Implement WorkController
 
   final count = 0.obs;
   @override

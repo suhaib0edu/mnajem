@@ -38,6 +38,6 @@ class AuthController extends GetxController {
   }
 
   goToControl() {
-    Get.offAllNamed(Routes.CONTROL);
+    Get.offAllNamed(Routes.EXPLORE);
   }
 }

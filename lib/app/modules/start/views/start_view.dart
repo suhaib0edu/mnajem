@@ -6,7 +6,7 @@ class StartView extends GetView<StartController> {
   const StartView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3), () => Get.offAllNamed(Routes.AUTH));
+    Future.delayed(const Duration(seconds: 3), () => Get.offAllNamed(Routes.EXPLORE));
     return SuhScaffold(
       body: Center(
         child: Column(
