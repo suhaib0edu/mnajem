@@ -14,6 +14,8 @@ export 'utils/widgets/suh_button.dart';
 export 'utils/widgets/suh_text.dart';
 export 'utils/widgets/suh_t_w_i_boutton.dart';
 export 'utils/widgets/suh_text_field.dart';
+export 'utils/widgets/suh_list_view_b.dart';
+export 'utils/widgets/suh_divider_w_text.dart';
 
 //components
 export 'utils/components/buttons/login_button.dart';
@@ -23,3 +25,4 @@ export 'utils/components/buttons/select_button.dart';
 export 'utils/components/buttons/menu_button.dart';
 export 'utils/components/avatar/avatar.dart';
 export 'utils/components/post/post_forms/post_forms.dart';
+export 'utils/components/appbar/appbar_view.dart';
