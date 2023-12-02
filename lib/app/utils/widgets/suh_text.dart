@@ -16,7 +16,7 @@ class SuhText extends StatelessWidget {
         fontFamily: 'Cairo',
         fontSize: fontSize,
         fontWeight: fontWeight,
-        color: color ?? textColor2,
+        color: color ?? textColor1,
       ),
     );
   }

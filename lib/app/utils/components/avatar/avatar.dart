@@ -41,7 +41,6 @@ class Avatar extends StatelessWidget {
           SuhText(
             text: name,
             fontSize: 12,
-            color: textColor1,
           )
       ],
     );

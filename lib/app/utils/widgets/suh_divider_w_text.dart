@@ -16,7 +16,6 @@ class SuhDividerWithText extends StatelessWidget {
           SuhText(
             text: st,
             fontSize: 16,
-            color: textColor1,
           ),
           const Expanded(
             child: Divider(
