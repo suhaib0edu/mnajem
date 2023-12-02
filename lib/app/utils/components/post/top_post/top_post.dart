@@ -14,7 +14,9 @@ class TopPost extends StatelessWidget {
         SizedBox(
           width: 6,
         ),
-        FollowButton(),
+        FollowButton(
+          withText: false,
+        ),
       ],
     );
   }

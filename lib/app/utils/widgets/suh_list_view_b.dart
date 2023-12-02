@@ -6,11 +6,17 @@ class SuhListViewB extends StatelessWidget {
   final bool isHorizontal;
   final double? height;
   final double? width;
+  final ScrollPhysics? physics;
+  final bool shrinkWrap;
   const SuhListViewB({
     super.key,
     required this.itemBuilder,
     this.itemCount,
-    this.isHorizontal = false, this.height, this.width,
+    this.isHorizontal = false,
+    this.height,
+    this.width,
+    this.physics,
+    this.shrinkWrap = false,
   });
 
   @override
@@ -25,7 +31,7 @@ class SuhListViewB extends StatelessWidget {
   crFun() {
     if (isHorizontal) {
       return Row(
-        children: [exFun()],
+        children: [Expanded(child: exFun())],
       );
     } else {
       return Column(
@@ -35,12 +41,12 @@ class SuhListViewB extends StatelessWidget {
   }
 
   Widget exFun() {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: itemCount,
-        scrollDirection: isHorizontal ? Axis.horizontal : Axis.vertical,
-        itemBuilder: itemBuilder,
-      ),
+    return ListView.builder(
+      physics: physics,
+      shrinkWrap: shrinkWrap,
+      scrollDirection: isHorizontal ? Axis.horizontal : Axis.vertical,
+      itemCount: itemCount,
+      itemBuilder: itemBuilder,
     );
   }
 }
