@@ -6,6 +6,7 @@ class FrindesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SuhContainer(
           height: 60,
@@ -17,7 +18,11 @@ class FrindesItem extends StatelessWidget {
           text: 'صديق مقترح',
           color: textColor,
           fontSize: 12,
-        )
+        ),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: FollowButton(),
+        ),
       ],
     );
   }

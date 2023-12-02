@@ -7,14 +7,15 @@ class FrindesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SuhContainer(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      color: backgroundC,
+      padding: EdgeInsets.zero,
+      margin: EdgeInsets.symmetric(vertical: 8),
+      radius: 0,
+      color: container.withOpacity(0.1),
       boxShadow: [
         BoxShadow(
           color: shadowC0lor1.withOpacity(0.5),
           blurStyle: BlurStyle.outer,
           blurRadius: 5,
-          spreadRadius: 0.5,
         ),
       ],
       child: Column(
@@ -22,7 +23,7 @@ class FrindesView extends StatelessWidget {
           SuhListViewB(
             itemCount: 8,
             isHorizontal: true,
-            height: 92,
+            height: 130,
             itemBuilder: (c, i) => const FrindesItem(),
           ),
         ],
