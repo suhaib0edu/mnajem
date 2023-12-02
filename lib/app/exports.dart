@@ -26,3 +26,4 @@ export 'utils/components/buttons/menu_button.dart';
 export 'utils/components/avatar/avatar.dart';
 export 'utils/components/post/post_forms/post_forms.dart';
 export 'utils/components/appbar/appbar_view.dart';
+export 'utils/components/buttons/filter_button.dart';
