@@ -1,5 +1,4 @@
 import 'package:mnajem/app/exports.dart';
-import 'filter/filter_view.dart';
 import 'hashtag/hashtag_view.dart';
 
 import '../controllers/explore_controller.dart';
