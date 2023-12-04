@@ -1,5 +1,5 @@
 import 'package:mnajem/app/exports.dart';
-
+import 'package:mnajem/app/modules/profile/views/top_profile.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -7,11 +7,15 @@ class ProfileView extends GetView<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return SuhScaffold(
-      body: const Center(
-        child: Text(
-          'ProfileView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: ListView(
+        children: const [
+          AppBarView(),
+          TopProfile(),
+          FilterView(
+            isPublic: false,
+          ),
+          PostView(),
+        ],
       ),
     );
   }
