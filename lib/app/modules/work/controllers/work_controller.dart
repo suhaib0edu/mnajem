@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 class WorkController extends GetxController {
   //TODO: Implement WorkController
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +18,24 @@ class WorkController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  selectState(int i, List l) {
+    print('index=> $i');
+  }
+
+  List<String> typeList = [
+    'الكل',
+    'المفضلة',
+    'منشوراتي',
+    'نشطة',
+    'غير نشطة',
+  ];
+
+  List<Map> sectionList = [
+    {'الاسم':'التصميم والابداع','الفروع':[
+      'تصميم شعارات',
+      'تصميم شعارات',
+      'تصميم شعارات',
+      'تصميم شعارات',
+    ]},
+  ]    ;
 }
