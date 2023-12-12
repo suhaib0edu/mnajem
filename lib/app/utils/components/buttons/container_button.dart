@@ -4,11 +4,13 @@ class ContainerButton extends StatelessWidget {
   final void Function()? onTap;
   final Color? color;
   final Widget? child;
+  final double? height;
   const ContainerButton({
     super.key,
     this.onTap,
     this.child,
     this.color,
+    this.height,
   });
 
   @override
@@ -20,7 +22,7 @@ class ContainerButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(11),
         child: SuhContainer(
           margin: const EdgeInsets.all(1),
-          height: 40,
+          height: height ?? 40,
           color: color,
           child: child,
         ),
