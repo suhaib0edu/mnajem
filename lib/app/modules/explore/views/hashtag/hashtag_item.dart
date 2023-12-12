@@ -32,6 +32,7 @@ class HashtagItem extends GetView {
                   text: 'مثال_لشكل_الهاشتاق',
                   color: textColor,
                   fontSize: 10,
+                  fontFamily: 2,
                 ),
               ),
             ],

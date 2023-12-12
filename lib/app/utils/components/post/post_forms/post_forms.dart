@@ -23,9 +23,13 @@ class PostForms extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: Row(
                   children: [
-                    SuhText(
-                      text: 'لأن تمشي بخطوات صغيرة خيراً من ان تقف في مكانك...',
-                      color: textColor,
+                    Expanded(
+                      child: SuhText(
+                        text:
+                            'لأن تمشي بخطوات صغيرة خيراً من ان تقف في مكانك...',
+                        color: textColor,
+                        fontFamily: 2,
+                      ),
                     )
                   ],
                 ),

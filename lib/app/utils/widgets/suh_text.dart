@@ -6,6 +6,7 @@ class SuhText extends StatelessWidget {
   final double? fontSize;
   final FontWeight? fontWeight;
   final Color? color;
+  final int fontFamily;
   const SuhText({
     super.key,
     this.text,
@@ -13,6 +14,7 @@ class SuhText extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.color,
+    this.fontFamily = 0,
   });
 
   @override
@@ -21,11 +23,22 @@ class SuhText extends StatelessWidget {
       text ?? '',
       textAlign: textAlign,
       style: TextStyle(
-        fontFamily: 'Cairo',
+        fontFamily: fF(),
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: color ?? textColor1,
       ),
     );
+  }
+
+  String fF() {
+    switch (fontFamily) {
+      case 1:
+        return 'Lateef';
+      case 2:
+        return 'ElMessiri';
+      default:
+        return 'Cairo';
+    }
   }
 }

@@ -28,3 +28,9 @@ flutter:
     - family: Cairo
       fonts:
         - asset: assets/fonts/Cairo-Medium.ttf
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic-Medium.ttf
+    - family: ElMessiri
+      fonts:
+        - asset: assets/fonts/ElMessiri-Medium.ttf

@@ -18,6 +18,7 @@ class FrindesItem extends StatelessWidget {
           text: 'صديق مقترح',
           color: textColor,
           fontSize: 12,
+          fontFamily: 2,
         ),
         Padding(
           padding: const EdgeInsets.all(4.0),

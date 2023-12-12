@@ -8,7 +8,7 @@ class JobPostItem extends StatelessWidget {
     return SuhContainer(
       child: Column(
         children: [
-          SuhContainer(
+          const SuhContainer(
             color: backgroundC,
             margin: EdgeInsets.zero,
             child: Row(
@@ -24,31 +24,32 @@ class JobPostItem extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Column(
               children: [
                 SuhText(
                   text:
                       "عنوان الوظيفة ، قد يكون العنوان طويل و يمكن ان يصل الي هذا الحد ",
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
                 ),
                 SuhText(
                   text:
                       "وصف تفصيلي للوظيفة التي يتم الاعلان عنها ، هنا توجد جميع التفاصيل المتعلقة بالوظيفة المعلن عنها حاليا و هذا اختبار لشكل الخط و درجة اللون و الحجم",
+                  color: textColor,
+                  fontFamily: 2,
                 ),
               ],
             ),
           ),
           SuhContainer(
             color: backgroundC.withOpacity(0.5),
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
             margin: EdgeInsets.zero,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SuhText(
+                const SuhText(
                   text: "عرض المزيد",
                   color: baseColor,
                 ),
