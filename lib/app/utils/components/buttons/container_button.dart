@@ -5,18 +5,20 @@ class ContainerButton extends StatelessWidget {
   final Color? color;
   final Widget? child;
   final double? height;
+  final EdgeInsetsGeometry? margin;
   const ContainerButton({
     super.key,
     this.onTap,
     this.child,
     this.color,
-    this.height,
+    this.height, this.margin,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 7),
+      padding:
+          margin ?? const EdgeInsets.symmetric(vertical: 3, horizontal: 7),
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(11),
