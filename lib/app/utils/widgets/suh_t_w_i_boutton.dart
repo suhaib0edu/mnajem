@@ -12,6 +12,7 @@ class SuhTWIButton extends StatelessWidget {
   final Color? iconColor;
   final Color? txtColor;
   final Color? bkgColor;
+  final bool isVertical;
   final EdgeInsetsGeometry? padding;
   final List<BoxShadow>? boxShadow;
   final Widget? child;
@@ -28,6 +29,7 @@ class SuhTWIButton extends StatelessWidget {
     this.iconColor,
     this.txtColor,
     this.bkgColor,
+    this.isVertical = false,
     this.padding,
     this.boxShadow,
     this.child,
@@ -39,37 +41,51 @@ class SuhTWIButton extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(radius ?? 20),
       child: SuhContainer(
-        height: cHeight,
-        width: cWidth,
-        margin: const EdgeInsets.all(1),
-        padding: padding ?? const EdgeInsets.all(0),
-        radius: radius ?? 20,
-        color: bkgColor ?? Colors.transparent,
-        boxShadow: boxShadow,
-        child: child ??
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                if (assetName != null)
-                  SvgPicture.asset(
-                    assetName ?? '',
-                    width: iconSize ?? 16,
-                    color: iconColor,
-                  ),
-                if (text != null && assetName != null)
-                  const SizedBox(
-                    width: 4,
-                  ),
-                if (text != null)
-                  SuhText(
-                    text: text ?? '',
-                    color: txtColor ?? textColor,
-                    fontSize: fontSize ?? 9,
-                  ),
-              ],
-            ),
-      ),
+          height: cHeight,
+          width: cWidth,
+          margin: const EdgeInsets.all(1),
+          padding: padding ?? const EdgeInsets.all(0),
+          radius: radius ?? 20,
+          color: bkgColor ?? Colors.transparent,
+          boxShadow: boxShadow,
+          child: child ?? isVerticalFun()),
     );
+  }
+
+  isVerticalFun() {
+    if (isVertical) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children: bFun(),
+      );
+    } else {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: bFun(),
+      );
+    }
+  }
+
+  List<Widget> bFun() {
+    return [
+      if (assetName != null)
+        SvgPicture.asset(
+          assetName ?? '',
+          width: iconSize ?? 16,
+          color: iconColor,
+        ),
+      if (text != null && assetName != null)
+        SizedBox(
+          width: isVertical ? 0 : 4,
+          height: isVertical ? 4 : 0,
+        ),
+      if (text != null)
+        SuhText(
+          text: text ?? '',
+          color: txtColor ?? textColor,
+          fontSize: fontSize ?? 9,
+        ),
+    ];
   }
 }
