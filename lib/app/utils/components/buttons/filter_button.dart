@@ -9,6 +9,7 @@ class FilterButton extends StatelessWidget {
   final double? fontSize;
   final double? iconSize;
   final Color? iconColor;
+  final Color? bkgColor;
   const FilterButton(
       {super.key,
       this.onTap,
@@ -18,7 +19,8 @@ class FilterButton extends StatelessWidget {
       this.height,
       this.fontSize,
       this.iconSize,
-      this.iconColor});
+      this.iconColor,
+      this.bkgColor});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class FilterButton extends StatelessWidget {
       padding: EdgeInsets.all(5),
       fontSize: fontSize ?? 11,
       iconSize: iconSize ?? 20,
-      bkgColor: container,
+      bkgColor: bkgColor ?? container,
     );
   }
 }
