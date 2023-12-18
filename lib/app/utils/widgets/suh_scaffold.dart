@@ -79,6 +79,10 @@ class SuhScaffold extends StatelessWidget {
                     assetName: walletSVG,
                     onTap: () => Get.offAllNamed(Routes.WALLET),
                   ),
+                  MenuButton(
+                    assetName: addPostSVG,
+                    onTap: () => Get.offAllNamed(Routes.SUHAIB),
+                  ),
                 ],
               ),
             ),

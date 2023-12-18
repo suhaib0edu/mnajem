@@ -14,6 +14,7 @@ abstract class Routes {
   static const SEARCH = _Paths.SEARCH;
   static const SEARCHER = _Paths.SEARCHER;
   static const WALLET = _Paths.WALLET;
+  static const SUHAIB = _Paths.SUHAIB;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const SEARCH = '/search';
   static const SEARCHER = '/searcher';
   static const WALLET = '/wallet';
+  static const SUHAIB = '/suhaib';
 }

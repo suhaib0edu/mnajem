@@ -14,6 +14,8 @@ import '../modules/shorts/bindings/shorts_binding.dart';
 import '../modules/shorts/views/shorts_view.dart';
 import '../modules/start/bindings/start_binding.dart';
 import '../modules/start/views/start_view.dart';
+import '../modules/suhaib/bindings/suhaib_binding.dart';
+import '../modules/suhaib/views/suhaib_view.dart';
 import '../modules/wallet/bindings/wallet_binding.dart';
 import '../modules/wallet/views/wallet_view.dart';
 import '../modules/work/bindings/work_binding.dart';
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.WALLET,
       page: () => const WalletView(),
       binding: WalletBinding(),
+    ),
+    GetPage(
+      name: _Paths.SUHAIB,
+      page: () => const SuhaibView(),
+      binding: SuhaibBinding(),
     ),
   ];
 }
