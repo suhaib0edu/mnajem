@@ -25,7 +25,7 @@ class WalletView extends GetView<WalletController> {
               ],
             ),
           ),
-          BalanceView(),
+          const BalanceView(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -35,7 +35,7 @@ class WalletView extends GetView<WalletController> {
               ),
               bankButton(
                 'تحويل خارحي',
-                Color.fromARGB(255, 158, 73, 27),
+                const Color.fromARGB(255, 158, 73, 27),
               ),
             ],
           ),
@@ -43,13 +43,13 @@ class WalletView extends GetView<WalletController> {
             'تحويل لحساب آخر',
             const Color.fromARGB(255, 23, 76, 119),
           ),
-          TransfersView(),
+          const TransfersView(),
         ],
       ),
     );
   }
 
-  bankButton(String? text, Color? color) {
+  Widget bankButton(String? text, Color? color) {
     return ContainerButton(
       color: color,
       child: Center(
