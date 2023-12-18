@@ -9,7 +9,9 @@ class ProfileView extends GetView<ProfileController> {
     return SuhScaffold(
       body: ListView(
         children: const [
-          AppBarView(),
+          AppBarView(
+            withAdd: false,
+          ),
           TopProfile(),
           FilterView(
             isPublic: false,
