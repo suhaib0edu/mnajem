@@ -11,6 +11,7 @@ class SelectButton extends StatelessWidget {
       bkgColor: Colors.transparent,
       borderSideColor: baseColor.withOpacity(0.5),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           SuhContainer(
             height: 20,
