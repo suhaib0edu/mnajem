@@ -33,6 +33,7 @@ class FilterButton extends StatelessWidget {
       fontSize: fontSize ?? 11,
       iconSize: iconSize ?? 20,
       bkgColor: bkgColor ?? container,
+      onTap: onTap,
     );
   }
 }
