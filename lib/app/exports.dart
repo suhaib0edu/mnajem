@@ -30,3 +30,6 @@ export 'utils/components/post/post_view.dart';
 export 'utils/components/appbar/appbar_view.dart';
 export 'utils/components/filter/filter_view.dart';
 export 'utils/components/states/states_bottom_sheet.dart';
+
+//fun
+export 'utils/fun/format_date_time.dart';
