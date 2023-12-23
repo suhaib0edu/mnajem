@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color baseColor = Color.fromRGBO(51, 151, 225, 1);
+const Color baseColor = Color.fromRGBO(20, 95, 153, 1);
 const Color backgroundC = Color.fromRGBO(30, 30, 30, 1);
 const Color backgroundC1 = Color.fromARGB(255, 20, 20, 20);
 const Color container = Color.fromRGBO(45, 45, 45, 1);
