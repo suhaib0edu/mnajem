@@ -2,6 +2,7 @@ import 'package:mnajem/app/exports.dart';
 
 class ContainerButton extends StatelessWidget {
   final void Function()? onTap;
+  final EdgeInsetsGeometry? padding;
   final Color? color;
   final Widget? child;
   final double? height;
@@ -9,6 +10,7 @@ class ContainerButton extends StatelessWidget {
   const ContainerButton({
     super.key,
     this.onTap,
+    this.padding,
     this.child,
     this.color,
     this.height, this.margin,
@@ -24,6 +26,7 @@ class ContainerButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(11),
         child: SuhContainer(
           margin: const EdgeInsets.all(1),
+          padding: padding,
           height: height ?? 40,
           color: color,
           child: child,
