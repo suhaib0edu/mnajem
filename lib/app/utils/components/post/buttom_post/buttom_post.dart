@@ -4,11 +4,13 @@ class ButtomPost extends StatelessWidget {
   final String? likeCount;
   final String? commentCount;
   final String? viewsCount;
+  final int date;
   const ButtomPost({
     super.key,
     this.likeCount,
     this.commentCount,
     this.viewsCount,
+    required this.date,
   });
 
   @override
@@ -40,12 +42,12 @@ class ButtomPost extends StatelessWidget {
           iconColor: iconC0lor,
         ),
         const Spacer(),
-        const SuhTWIButton(
-          text: '04/11/2023',
+        SuhTWIButton(
+          text: DateTime.fromMillisecondsSinceEpoch(date).toDateAndTime(),
           txtColor: textColor2,
           fontSize: 8,
           bkgColor: container,
-          padding: EdgeInsets.symmetric(horizontal: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 5),
         ),
         const SuhTWIButton(
           assetName: moreSVG,
