@@ -19,7 +19,7 @@ class FilterMarket extends StatelessWidget {
               child: Row(
                 children: [
                   SuhText(
-                    text: 'تصفية',
+                    text: 'حدد القسم',
                   ),
                   Icon(
                     Icons.filter_alt_rounded,
@@ -38,7 +38,7 @@ class FilterMarket extends StatelessWidget {
   categoryView() {
     return SuhListViewB(
       isHorizontal: true,
-      height: 45,
+      height: 38,
       itemCount: 10,
       itemBuilder: (c, i) => categoryItem(c, i),
     );

@@ -15,6 +15,7 @@ class MarketView extends GetView<MarketController> {
           AppBarView(
             onTap: () => Get.to(() => const AddProduct()),
           ),
+          searchBar(),
           con([
             const FilterMarket(),
             const SliderProduct(),
@@ -32,7 +33,7 @@ class MarketView extends GetView<MarketController> {
     );
   }
 
-  section(String text) {
+  Widget section(String text) {
     return Row(
       children: [
         const SizedBox(
@@ -46,7 +47,7 @@ class MarketView extends GetView<MarketController> {
     );
   }
 
-  con(List<Widget> children) {
+  Widget con(List<Widget> children) {
     return SuhContainer(
       margin: const EdgeInsets.symmetric(vertical: 8),
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -54,6 +55,38 @@ class MarketView extends GetView<MarketController> {
       color: container.withOpacity(0.3),
       child: Column(
         children: children,
+      ),
+    );
+  }
+
+  Widget searchBar() {
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Stack(
+        children: [
+          const Row(
+            children: [
+              Expanded(
+                child: SuhTextField(
+                  hintText: 'بحث عن منتج محدد ...',
+                ),
+              )
+            ],
+          ),
+          Positioned(
+            left: 8,
+            top: 4,
+            bottom: 4,
+            child: ContainerButton(
+              margin: EdgeInsets.zero,
+              color: backgroundC.withOpacity(0.5),
+              child: const Icon(
+                Icons.search,
+                color: iconC0lor,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
